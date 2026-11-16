@@ -14,7 +14,7 @@ namespace QuanLyQuanAn.Forms
             Font = new Font("Segoe UI", 10F);
             BackColor = Color.WhiteSmoke;
 
-            // Thanh tiêu đề phía trên
+            // Thanh tiêu đề phía trên (tự căn chỉnh khoảng cách, không bao giờ bị đè chữ)
             var pnlHeader = new Panel
             {
                 Dock = DockStyle.Top,
@@ -28,8 +28,18 @@ namespace QuanLyQuanAn.Forms
                 Text = "QUẢN LÝ QUÁN CAFE & TRÀ SỮA",
                 ForeColor = Color.White,
                 Font = new Font("Segoe UI", 14F, FontStyle.Bold),
+                Dock = DockStyle.Left,
+                TextAlign = ContentAlignment.MiddleLeft,
+                AutoSize = true
+            };
+
+            var pnlRight = new FlowLayoutPanel
+            {
+                Dock = DockStyle.Right,
                 AutoSize = true,
-                Location = new Point(20, 18)
+                WrapContents = false,
+                Padding = new Padding(0, 16, 0, 0),
+                BackColor = Color.Transparent
             };
 
             var lblUser = new Label
@@ -38,7 +48,7 @@ namespace QuanLyQuanAn.Forms
                 ForeColor = Color.Bisque,
                 Font = new Font("Segoe UI", 10F, FontStyle.Bold),
                 AutoSize = true,
-                Location = new Point(620, 22)
+                Margin = new Padding(0, 6, 15, 0)
             };
 
             var btnDangXuat = new Button
@@ -47,12 +57,15 @@ namespace QuanLyQuanAn.Forms
                 BackColor = Color.IndianRed,
                 ForeColor = Color.White,
                 FlatStyle = FlatStyle.Flat,
-                Location = new Point(900, 16),
-                Size = new Size(100, 32)
+                Size = new Size(105, 32),
+                Cursor = Cursors.Hand
             };
             btnDangXuat.Click += (_, _) => Application.Restart();
 
-            pnlHeader.Controls.AddRange(new Control[] { lblApp, lblUser, btnDangXuat });
+            pnlRight.Controls.Add(lblUser);
+            pnlRight.Controls.Add(btnDangXuat);
+            pnlHeader.Controls.Add(pnlRight);
+            pnlHeader.Controls.Add(lblApp);
 
             // ==================== CỘT 1: PHẦN 1 (TV01 - POS & CRM) ====================
             var grpPhan1 = TaoNhomChucNang("PHẦN 1: BÁN HÀNG & KHÁCH HÀNG (TV01)", 25);
