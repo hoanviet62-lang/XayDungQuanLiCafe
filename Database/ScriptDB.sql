@@ -115,9 +115,9 @@ GO
 -- DỮ LIỆU MẪU 100% QUÁN CAFE - TRÀ SỮA - BÁNH NGỌT
 -- =========================================================================
 INSERT INTO NhanVien (HoTen, ChucVu, SoDienThoai, TaiKhoan, MatKhau, LuongCoBan) VALUES
-(N'Nguyễn Văn An', N'Quản lý', '0901111222', 'admin', '123456', 12000000),
-(N'Trần Thị Bình', N'Thu ngân', '0903333444', 'thungan01', '123456', 7500000),
-(N'Lê Hoàng Cường', N'Pha chế & Kho', '0905555666', 'barista01', '123456', 8500000);
+(N'Bùi Lê Hoàn', N'Quản lý', '0901111222', 'hoan', '123456', 12000000),
+(N'Nguyễn Tiến Nhật Minh', N'Thu ngân', '0903333444', 'minh', '123456', 7500000),
+(N'Nguyễn Văn Lộc', N'Pha chế & Kho', '0905555666', 'loc', '123456', 8500000);
 
 INSERT INTO BanAn (TenBan, KhuVuc, SucChua, TrangThai) VALUES
 (N'Bàn 01', N'Trong nhà', 2, N'Trống'),
@@ -175,4 +175,4 @@ INSERT INTO ChiTietHoaDon (MaHD, MaMon, SoLuong, DonGiaBan) VALUES
 (1, 3, 1, 32000),
 (2, 1, 1, 29000),
 (2, 8, 1, 45000);
-GO
+GO  
