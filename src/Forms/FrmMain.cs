@@ -74,15 +74,14 @@ namespace QuanLyQuanAn.Forms
             var btnP1_3 = TaoNut("3. Khách hàng & Tích điểm", 175, Color.SteelBlue);
 
             // TODO (TV01): Thay MessageBox bằng lệnh mở Form của TV01 (VD: new FrmBanHang().ShowDialog();)
-<<<<<<< HEAD
             btnP1_1.Click += (_, _) => new FrmLapHoaDonPOS().ShowDialog();
             btnP1_2.Click += (_, _) => new FrmQuanLyHoaDon().ShowDialog();
             btnP1_3.Click += (_, _) => new FrmKhachHangTichDiem().ShowDialog();
-=======
+
             btnP1_1.Click += (_, _) => MessageBox.Show("Chức năng của Thành viên 01 (Đang chờ ghép Form).", "Thông báo");
             btnP1_2.Click += (_, _) => MessageBox.Show("Chức năng của Thành viên 01 (Đang chờ ghép Form).", "Thông báo");
             btnP1_3.Click += (_, _) => MessageBox.Show("Chức năng của Thành viên 01 (Đang chờ ghép Form).", "Thông báo");
->>>>>>> 46fb738bb256fcf8247de158d0fc7db7b27fcdf6
+
             grpPhan1.Controls.AddRange(new Control[] { btnP1_1, btnP1_2, btnP1_3 });
 
             // ==================== CỘT 2: PHẦN 2 (TV02 - CỦA BẠN) ====================
